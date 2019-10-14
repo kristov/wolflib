@@ -2,7 +2,7 @@
 
 Problem: couldn't find code for decoding wolf3d map files that compiled on Linux. Solution: cobble together different bits of code into something that seems to work:
 
-    git clone 
+    git clone https://github.com/kristov/wolflib.git
     cd wolflib
     make
 
