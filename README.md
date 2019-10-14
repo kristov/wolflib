@@ -32,3 +32,6 @@ I got my sources from [AlumiuN/Wolf4SDL](https://github.com/AlumiuN/Wolf4SDL.git
 ## Example
 
 See `mapdump.c` for example usage.
+
+    ./mapdump --maphead=MAPHEAD.WL6 --gamemaps=GAMEMAPS.WL6 --map=5
+
