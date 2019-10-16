@@ -30,15 +30,14 @@ static void print_mapsegs(struct map_ctx* ctx) {
     }
 }
 
-void print_walls(struct map_planes* planes) {
-
-    uint16_t* p = planes->plane_0;
-
+void print_map(struct map_planes* planes) {
     uint16_t tile;
+    //uint16_t ting;
     for (uint8_t y = 0; y < 64; y++) {
         printf ("%2d: ", y);
         for (uint8_t x = 0; x < 64; x++) {
-            tile = p[y * 64 + x];
+            tile = planes->plane_0[y * 64 + x];
+            //ting = planes->plane_1[y * 64 + x];
             if (tile < AREATILE) {
                 printf("%02x", tile);
             }
@@ -129,7 +128,7 @@ int main(int argc, char *argv[]) {
 
     struct map_planes planes;
     fill_map_planes(&ctx, gamemaps, map, &planes);
-    print_walls(&planes);
+    print_map(&planes);
 
     return 0;
 }

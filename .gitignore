@@ -1,3 +1,5 @@
-map.o
+*.o
 wolflib.so
 mapdump
+vgadump
+vswapdump
